@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+<link href='css/fullcalendar.min.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='js/lib/moment.min.js'></script>
+<script src='js/lib/jquery-ui.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+
+<script>
+	$(document).ready(function() {
+		/* initialize the external events
+		-----------------------------------------------------------------*/
+        
+		$('#external-events .fc-event').each(function() {
+			// store data so the calendar knows to render an event upon drop
+			$(this).data('event', {
+				title: $.trim($(this).text()), // use the element's text as the event title
+				stick: true // maintain when user navigates (see docs on the renderEvent method)
+			});
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // will cause the event to go back to its
+				revertDuration: 0  //  original position after the drag
+			});
+		});
+		
+		
+		
+		/* initialize the calendar
+		-----------------------------------------------------------------*/
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '2017-12-12',
+			height: 650,
+			minTime: "09:00:00",
+			maxTime: "19:00:00",
+			businessHours: {
+    // days of week. an array of zero-based day of week integers (0=Sunday)
+    dow: [ 1, 2, 3, 4, 5 ], // Monday - Thursday
+    start: '09:00', // a start time (10am in this example)
+    end: '19:00', // an end time (6pm in this example)
+},
+			events: [
+
+
+
+
+				
+				{
+					start: '2017-12-11T00:00:00',
+					end: '2017-12-11T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},
+				{
+					title: 'Conference Day',
+					start: '2017-12-11',
+					end: '2017-12-11',
+					color: '#ff9f89'
+				},
+
+
+				{
+					title: 'Launch',
+					start: '2017-12-12T13:00:00',
+					end: '2017-12-12T14:00:00',
+					color: '#ff9f89',
+					editable: false
+				},
+				
+				{
+					title: 'Launch',
+					start: '2017-12-13T13:00:00',
+					end: '2017-12-13T14:00:00',
+					color: '#ff9f89',
+					editable: false
+				},
+				
+				{
+					title: 'Launch',
+					start: '2017-12-14T13:00:00',
+					end: '2017-12-14T14:00:00',
+					color: '#ff9f89',
+					editable: false
+				},
+				
+				{
+					title: 'Launch',
+					start: '2017-12-15T13:00:00',
+					end: '2017-12-15T14:00:00',
+					color: '#ff9f89',
+					editable: false
+				},
+				
+
+
+				{
+					title: 'Work Day',
+					start: '2017-12-12',
+					end: '2017-12-12',
+					color: '#257e4a'
+				},				
+				{
+					start: '2017-12-12T00:00:00',
+					end: '2017-12-12T09:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-12T09:00:00',
+					end: '2017-12-12T13:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},						
+				{
+					start: '2017-12-12T13:00:00',
+					end: '2017-12-12T14:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-12T14:00:00',
+					end: '2017-12-12T19:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},	
+				{
+					start: '2017-12-12T19:00:00',
+					end: '2017-12-12T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+
+				
+				{
+					title: 'Work Day',
+					start: '2017-12-13',
+					end: '2017-12-12',
+					color: '#257e4a'
+				},				
+				{
+					start: '2017-12-13T00:00:00',
+					end: '2017-12-13T09:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-13T09:00:00',
+					end: '2017-12-13T13:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},						
+				{
+					start: '2017-12-13T13:00:00',
+					end: '2017-12-13T14:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-13T14:00:00',
+					end: '2017-12-13T19:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},	
+				{
+					start: '2017-12-13T19:00:00',
+					end: '2017-12-13T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},
+				
+				
+						
+				{
+					title: 'Work Day',
+					start: '2017-12-14',
+					end: '2017-12-14',
+					color: '#257e4a'
+				},				
+				{
+					start: '2017-12-14T00:00:00',
+					end: '2017-12-14T09:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-14T09:00:00',
+					end: '2017-12-14T13:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},						
+				{
+					start: '2017-12-14T13:00:00',
+					end: '2017-12-14T14:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-14T14:00:00',
+					end: '2017-12-14T19:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},	
+				{
+					start: '2017-12-14T19:00:00',
+					end: '2017-12-14T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},
+								
+				{
+					title: 'Work Day',
+					start: '2017-12-15',
+					end: '2017-12-15',
+					color: '#257e4a'
+				},				
+				{
+					start: '2017-12-15T00:00:00',
+					end: '2017-12-15T09:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-15T09:00:00',
+					end: '2017-12-15T13:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},						
+				{
+					start: '2017-12-15T13:00:00',
+					end: '2017-12-15T14:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},	
+				{
+					start: '2017-12-15T14:00:00',
+					end: '2017-12-15T19:00:00',
+					rendering: 'background',
+					color: '#257e4a'
+				},	
+				{
+					start: '2017-12-15T19:00:00',
+					end: '2017-12-15T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},				
+				{
+					start: '2017-12-16T00:00:00',
+					end: '2017-12-17T24:00:00',
+					overlap: false,
+					rendering: 'background',
+					color: '#ff9f89'
+				},
+				{
+					title: 'WeekEnd',
+					start: '2017-12-16',
+					end: '2017-12-18',
+					color: '#ff9f89'
+				},
+				
+				
+				
+				
+				
+				
+				
+				{
+					title: 'Albert Schrauth (C353014992) +49 1573 8793402',
+					start: '2017-12-12T09:00:00',
+					end: '2017-12-12T09:30:00',
+
+					color: '#257e4a'
+				},
+				
+				{
+					title: 'Edel Meisel (B576231409) +49 1573 8182690',
+					start: '2017-12-13T09:00:00',
+					end: '2017-12-13T09:30:00',
+					color: '#257e4a'
+				},
+				
+				{
+					title: 'Alfred Morsche (E572575188) +49 1573 6001261',
+					start: '2017-12-12T10:00:00',
+					end: '2017-12-12T10:30:00',
+					color: '#257e4a'
+				},
+				
+				{
+					title: 'Curt Witzleben (Z860734846) +49 1573 7299597',
+					start: '2017-12-13T10:30:00',
+					end: '2017-12-13T11:00:00',
+					color: '#257e4a'
+				},
+				
+				{
+					title: 'Hild Schoepfel (D956769504) +49 1573 2029474',
+					start: '2017-12-14T09:00:00',
+					end: '2017-12-14T09:30:00',
+					color: '#257e4a'
+				},
+
+				{
+					title: 'Helewidis Hohn (Y600848409) +49 1573 9455763',
+					start: '2017-12-12T11:30:00',
+					end: '2017-12-12T12:00:00',
+					color: '#257e4a'
+				},
+				
+				{
+					title: 'Selma Thumann(Z638255358) +49 1573 5643494',
+					start: '2017-12-12T12:00:00',
+					end: '2017-12-12T12:30:00',
+					color: '#257e4a'
+				}
+				
+			],
+			defaultView: 'agendaWeek',
+			selectable: true,
+			select: function(start, end) {
+				var title = prompt('Event Title:');
+				var eventData;
+				if (title) {
+					eventData = {
+						title: title,
+						start: start,
+						end: end
+					};
+					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+				}
+				$('#calendar').fullCalendar('unselect');
+			},
+			weekNumbers: true,
+			axisFormat: 'HH:mm',
+			timeFormat: 'HH:mm',
+			slotLabelFormat:"HH:mm",
+			weekNumbersWithinDays: true,
+			weekNumberCalculation: 'ISO',
+			editable: true,
+			droppable: true, // this allows things to be dropped onto the calendar
+			drop: function() {
+				// is the "remove after drop" checkbox checked?
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(this).remove();
+				}
+			}
+		});
+	});	
+	
+	
+	$(document).ready(function() {
+		$(".dropdown-button").dropdown();
+	});
+        
+</script>
+<style>
+	#wrap {
+		width: 100%;
+		margin: 0 auto;
+	}
+	#external-events {
+		float: left;
+		width: 100%;
+		padding: 0 10px;
+		text-align: left;
+	}
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+	}
+	#external-events .fc-event {
+		margin: 10px 0;
+		cursor: pointer;
+	}
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+	}
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+	}
+	#calendar {
+	height: 10%;
+	}
+	
+</style>
+
+
+
+
+
+
+
+
+
+  <nav class="green lighten-2" role="navigation">
+    <div class="nav-wrapper"><a href="#" class="brand-logo" style="padding-left: 20px;"><img src="img/logo.png" height="64"></a>
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+
+      <ul class="right hide-on-med-and-down">
+        		<li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+   <div class="row">
+    <div class="container col s3">
+		  <ul class="collection  card-panel">
+			<li class="collection-item avatar green lighten-4">
+			  <img src="img/ava/doc1.jpg" alt="" class="circle">
+			  <span class="title">Dr.Reinhardt Ziemer</span>
+                    <p>dentist
+                      <br>102 cabinet<span class="new badge red">4</span>
+                    </p>
+			  <a href="#!" class="secondary-content grey-text">online<i class="material-icons green-text tiny">lens</i></a>
+			</li>
+
+			<li class="collection-item avatar">
+			  <img src="img/ava/doc2.jpg" alt="" class="circle">
+			  <span class="title">Dr. Oswin Fleischer</span>
+			  <p>ophthalmologist <br>
+				 204 cabinet<span class="new badge red">2</span>
+			  </p>
+			  <a href="#!" class="secondary-content grey-text">online<i class="material-icons green-text tiny">lens</i></a>
+			</li>			
+			
+			<li class="collection-item avatar">
+			  <img src="img/ava/doc3.jpg" alt="" class="circle">
+			  <span class="title">Dr. Joseph Jochems</span>
+			  <p>surgeon<br>
+				 206 cabinet
+			  </p>
+			  <a href="#!" class="secondary-content grey-text">offline</a>
+			</li>			
+			
+			<li class="collection-item avatar">
+			  <img src="img/ava/doc4.jpg" alt="" class="circle">
+			  <span class="title">Dr. Ralf Mehl</span>
+			  <p>therapist<br>
+				 301 cabinet
+			  </p>
+			  <a href="#!" class="secondary-content grey-text">offline</a>
+			</li>			
+			<li class="center">
+		  		<a class="btn-floating btn-large waves-effect waves-light red">
+					<i class="material-icons">add</i>
+				</a>
+			</li>
+		  </ul>
+
+			
+	<div id='external-events' class="card-panel yellow lighten-3">
+			<h4>New Requests for Dr.Reinhardt Ziemer</h4>
+			<div class='fc-event green'>Genovefa Stechmann (B789154359) +49 1573 1521374</div>
+			<div class='fc-event green'>Walter Helms (B474753184) +49 1573 3255318</div>
+			<div class='fc-event green'>Jost Gerhold (E414234942) +49 1573 4929248</div>
+			<div class='fc-event green'>Emil Millahn (F372690334) +49 1573 7430994</div>
+			<p style="display: none">
+				<input type='checkbox' id='drop-remove' checked="checked"/>
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+	</div>	
+
+	<div id='external-events' class="card-panel yellow lighten-3">
+			<h4>New Requests for Dr.Oswin Fleischerh</h4>
+			<div class='fc-event green'>Madde Griese (C884148217) +49 1573 3067118</div>
+			<div class='fc-event green'>Hadwigis Fach (C943172200) +49 1573 5703725</div>
+			<p style="display: none">
+				<input type='checkbox' id='drop-remove' checked="checked"/>
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+	</div>
+
+	
+	</div>
+
+	
+	
+	
+	
+    <div class="col s7 card-panel">
+              <div class="row">
+	<div id='wrap'>
+
+
+
+		<div id='calendar'></div>
+
+	</div>
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+              </div>
+	</div>
+	
+	
+	
+    <div class="col s2">
+	
+	<div>
+	<p> </p>
+	</div>	
+	<div class="grey lighten-2">
+	09:00 Albert Schrauth at 102 cabinet  
+	</div>
+	<div class="grey lighten-2">
+	09:30 Edel Meisel at 102 cabinet  
+	</div>	
+	<div class="grey lighten-2">
+	10:00 Alfred Morsche at 102 cabinet 
+	</div>	
+	<div class="blue lighten-2">
+	10:30 Curt Witzleben at 102 cabinet 
+	</div>
+	<div class="green lighten-2">
+	12:30 Selma Thumann at 102 cabinet 
+	</div>
+	
+	
+	</div>
+  </div> 
+  
+  
+  
+  
+  <footer class="page-footer green lighten-2">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  
+  
+
+
+  
+  
+  
+  </body>
+</html>
